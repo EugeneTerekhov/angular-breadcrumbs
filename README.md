@@ -1,5 +1,6 @@
-# Breadcrumbs
-## Example
+# Breadcrumbs  
+npm i et-ng-breadcrumbs  
+## Example  
 
 ```ts
     {
@@ -10,7 +11,7 @@
                 label: (data: Data) => data.subject.name
             }
         },
-        rsolve:{
+        resolve:{
             subject: SubjectResolver
         }
     }

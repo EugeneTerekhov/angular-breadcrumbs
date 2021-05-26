@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "breadcrumbs": {
+      "projectType": "library",
+      "root": "projects/breadcrumbs",
+      "sourceRoot": "projects/breadcrumbs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/breadcrumbs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/breadcrumbs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/breadcrumbs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/breadcrumbs/src/test.ts",
+            "tsConfig": "projects/breadcrumbs/tsconfig.spec.json",
+            "karmaConfig": "projects/breadcrumbs/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "breadcrumbs"
+}

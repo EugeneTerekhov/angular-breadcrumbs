@@ -1,0 +1,6 @@
+<div class="breadcrumbs">
+  <ng-container *ngFor="let breadcrumb of breadcrumbs$ | async; let i = index">
+    <span *ngIf="i > 0" class="breadcrumb-chevron"> > </span>
+    <span class="breadcrumb" (click)="navigate(breadcrumb)">{{ breadcrumb.label }}</span>
+  </ng-container>
+</div>

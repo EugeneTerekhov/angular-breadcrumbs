@@ -40,7 +40,7 @@ export class BreadcrumbsService {
 
 const build = (
   router: ActivatedRouteSnapshot,
-  starter?: { label: string; link: string }
+  starter?: Breadcrumb
 ) => {
   let breadcrumbs = starter ? [starter] : [];
   let route: ActivatedRouteSnapshot | null = router;
